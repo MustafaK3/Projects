@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+void displayMatrix(int matrix[][2]);
+
+int main(void) {
+    int matrix[2][2] = {
+        {10, 20},
+        {30, 40}
+    };
+
+    displayMatrix(matrix);
+
+    printf("Last element: %d\n",
+           *(*(matrix + 1) + 1));
+
+    return 0;
+}
+
+void displayMatrix(int matrix[][2]) {
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            printf("%d ", *(*(matrix + i) + j));
+        }
+        printf("\n");
+    }
+}
