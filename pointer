@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+void addTen(int *ptr);
+
+int main(void) {
+    int a = 30;
+    int *b = &a;
+
+    addTen(b);
+
+    printf("%d\n", a);
+
+    return 0;
+}
+
+void addTen(int *ptr) {
+    *ptr = *ptr + 10;
+}
