@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+int main(void) {
+    int a = 5;
+    int b;
+
+    b = ++a;
+    printf("Pre-increment: %d %d\n", a, b);
+
+    a = 5;
+    b = a++;
+    printf("Post-increment: %d %d\n", a, b);
+
+    a = 5;
+    b = --a;
+    printf("Pre-decrement: %d %d\n", a, b);
+
+    a = 5;
+    b = a--;
+    printf("Post-decrement: %d %d\n", a, b);
+
+    return 0;
+}
