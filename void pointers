@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+void updateNumber(void *ptr);
+
+int main(void) {
+    int number = 25;
+    void *ptr = &number;
+
+    updateNumber(ptr);
+
+    printf("Updated number: %d\n", number);
+
+    return 0;
+}
+
+void updateNumber(void *ptr) {
+    *(int *)ptr = 75;
+}
