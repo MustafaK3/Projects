@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+
+void updateValue(int **p);
+
+int main(void) {
+    int value = 15;
+    int *ptr = &value;
+    int **doublePtr = &ptr;
+
+    updateValue(doublePtr);
+
+    printf("Updated value: %d\n", value);
+
+    return 0;
+}
+
+void updateValue(int **p) {
+    **p = **p * 4;
+}
