@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+
+void display(int a[], int size);
+
+int main(void) {
+    int numbers[] = {5, 10, 15, 20, 25};
+    int choice;
+
+    do {
+        printf("===== MENU =====\n");
+        printf("1. Display numbers\n");
+        printf("2. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                display(numbers, 5);
+                break;
+            case 2:
+                printf("Goodbye!\n");
+                break;
+            default:
+                printf("Invalid choice\n");
+        }
+    } while(choice != 2);
+
+    return 0;
+}
+
+void display(int a[], int size) {
+    for(int i = 0; i < size; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
