@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int neuron(int input1, int input2,
+           int weight1, int weight2,
+           int bias) {
+    int total;
+
+    total = (input1 * weight1) + (input2 * weight2) + bias;
+
+    if (total >= 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main(void) {
+    int result;
+
+    result = neuron(1, 1, 1, 1, -2);
+
+    printf("Output: %d\n", result);
+
+    return 0;
+}
